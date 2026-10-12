@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07172e">
+  <meta name="description" content="Explore Vedic birth chart and Kundli services with BABA ASTRO.">
+  <title>Kundli Generation | BABA ASTRO</title>
+
+  <style>
+    :root {
+      --navy: #07172e;
+      --navy2: #102b4d;
+      --gold: #e7ae35;
+      --saffron: #d66a12;
+      --cream: #fff8e8;
+      --text: #26354a;
+      --muted: #687386;
+      --border: #eadfca;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fffdf8;
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container { width: min(1160px, 92%); margin: auto; }
+
+    .topbar {
+      background: var(--navy);
+      color: #ffdb83;
+      text-align: center;
+      padding: 9px;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    header { background: #fffdf8; border-bottom: 1px solid var(--border); }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; }
+
+    .brand img { width: 52px; height: 52px; object-fit: contain; }
+
+    .brand strong {
+      display: block;
+      font: bold 23px Georgia, serif;
+      color: var(--navy);
+    }
+
+    .brand small {
+      color: #a76510;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; align-items: center; gap: 19px; font-size: 13px; font-weight: bold; }
+    nav a:hover { color: var(--saffron); }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border: 0;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffdb83, var(--saffron));
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 75px 0;
+      color: white;
+      background:
+        radial-gradient(circle at 85% 30%, #e7ae3529, transparent 35%),
+        linear-gradient(120deg, var(--navy), var(--navy2));
+    }
+
+    .eyebrow {
+      color: #ffdb83;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 800px;
+      margin: 18px 0;
+      font: normal clamp(40px, 6vw, 64px)/1.12 Georgia, serif;
+    }
+
+    .hero h1 span { color: #ffdb83; }
+    .hero p { max-width: 680px; color: #d1d9e6; font-size: 15px; }
+
+    section { padding: 70px 0; }
+
+    .heading { max-width: 720px; margin: 0 auto 35px; text-align: center; }
+
+    .heading small {
+      color: #a76510;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .heading h2 {
+      color: var(--navy);
+      margin: 12px 0;
+      font: normal clamp(30px, 4vw, 42px)/1.2 Georgia, serif;
+    }
+
+    .heading p { color: var(--muted); font-size: 14px; }
+
+    .kundli-layout {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .form-card, .info-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 35px #07172e08;
+    }
+
+    .form-card h3, .info-card h3 {
+      color: var(--navy);
+      font: normal 25px Georgia, serif;
+      margin-bottom: 7px;
+    }
+
+    .subtext { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+
+    .field { display: flex; flex-direction: column; gap: 7px; }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label { color: var(--navy); font-size: 12px; font-weight: bold; }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      background: #fffdf8;
+      border: 1px solid #dcd5c8;
+      border-radius: 9px;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+      min-height: 47px;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #e7ae3560;
+      border-color: var(--gold);
+    }
+
+    .hint { color: var(--muted); font-size: 11px; }
+
+    .submit-btn { width: 100%; margin-top: 22px; padding: 15px; }
+
+    .privacy-note { margin-top: 14px; color: var(--muted); font-size: 11px; }
+
+    .info-card { background: var(--cream); }
+
+    .info-card p { color: var(--muted); font-size: 13px; }
+
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .benefit:last-child { border-bottom: 0; }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #ffedc4;
+      font-size: 20px;
+    }
+
+    .benefit h4 { color: var(--navy); font-size: 14px; margin-bottom: 3px; }
+    .benefit p { font-size: 12px; }
+
+    .result {
+      display: none;
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      background: #fff8e8;
+    }
+
+    .result h4 { color: var(--navy); margin-bottom: 6px; }
+    .result p { color: var(--muted); font-size: 13px; }
+    .result a { display: inline-block; margin-top: 12px; color: #a76510; font-size: 12px; font-weight: bold; }
+
+    .notice {
+      margin-top: 25px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fffdf8;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .cta { background: var(--navy); color: white; text-align: center; padding: 55px 0; }
+    .cta h2 { font: normal clamp(29px, 4vw, 42px) Georgia, serif; margin-bottom: 12px; }
+    .cta p { color: #cbd5e1; font-size: 14px; margin-bottom: 22px; }
+
+    footer { background: #061225; color: #d4ddeb; padding: 35px 0 20px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer p, footer a { font-size: 12px; color: #b6c1d2; }
+    footer a:hover { color: #ffdb83; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .copyright { border-top: 1px solid #26364d; margin-top: 22px; padding-top: 16px; font-size: 11px; color: #aebbd0; }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      padding: 12px 17px;
+      border-radius: 30px;
+      background: #168b4b;
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      box-shadow: 0 6px 20px #0003;
+    }
+
+    @media(max-width: 900px) {
+      nav { gap: 10px; }
+      .kundli-layout { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width: 650px) {
+      .navbar { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      nav { flex-wrap: wrap; gap: 12px; }
+      .hero { padding: 55px 0; }
+      section { padding: 48px 0; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .form-card, .info-card { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">VEDIC BIRTH CHART · BABA ASTRO</div>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/baba-astro-logo.png" alt="BABA ASTRO Logo">
+        <div>
+          <strong>BABA ASTRO</strong>
+          <small>VEDIC ASTROLOGY</small>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="kundli.html">Kundli</a>
+        <a href="horoscope.html">Horoscope</a>
+        <a href="contact.html" class="btn">Contact Us →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Your Birth Chart Journey</div>
+        <h1>Explore Your <span>Vedic Kundli.</span></h1>
+        <p>
+          Enter your birth details to begin your Kundli enquiry.
+          Accurate chart generation requires a reliable astrology calculation
+          engine and correct birth-time and location data.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="heading">
+          <small>Kundli Details</small>
+          <h2>Enter Your Birth Information.</h2>
+          <p>Provide the details below to prepare a Kundli request.</p>
+        </div>
+
+        <div class="kundli-layout">
+          <div class="form-card">
+            <h3>Birth Details</h3>
+            <p class="subtext">Fields marked * are required.</p>
+
+            <form id="kundliForm">
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="fullName">Full Name *</label>
+                  <input id="fullName" name="fullName" type="text"
+                         placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                  <label for="birthDate">Date Of Birth *</label>
+                  <input id="birthDate" name="birthDate" type="date" required>
+                </div>
+
+                <div class="field">
+                  <label for="birthTime">Time Of Birth *</label>
+                  <input id="birthTime" name="birthTime" type="time" required>
+                </div>
+
+                <div class="field full">
+                  <label for="birthPlace">Birthplace *</label>
+                  <input id="birthPlace" name="birthPlace" type="text"
+                         placeholder="City, State/Region, Country"
+                         autocomplete="off" required>
+                  <span class="hint">Enter the city and country where you were born.</span>
+                </div>
+
+                <div class="field">
+                  <label for="gender">Gender (Optional)</label>
+                  <select id="gender" name="gender">
+                    <option value="">Prefer not to say</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="chartType">Chart Preference</label>
+                  <select id="chartType" name="chartType">
+                    <option value="vedic">Vedic Kundli</option>
+                    <option value="north">North Indian Chart</option>
+                    <option value="south">South Indian Chart</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="btn submit-btn" type="submit">Submit Kundli Enquiry →</button>
+
+              <p class="privacy-note">
+                Please provide accurate information. Avoid sharing personal
+                birth details on a public or shared device.
+              </p>
+            </form>
+
+            <div class="result" id="formResult" role="status" aria-live="polite">
+              <h4>Your Kundli Enquiry Is Ready</h4>
+              <p id="resultMessage"></p>
+              <a id="whatsappLink" href="#" target="_blank" rel="noopener noreferrer">
+                Continue Enquiry On WhatsApp ↗
+              </a>
+            </div>
+          </div>
+
+          <aside class="info-card">
+            <h3>About Your Kundli</h3>
+            <p>
+              A Vedic birth chart is traditionally calculated using a person's
+              date, time and place of birth.
+            </p>
+
+            <div class="benefit">
+              <div class="benefit-icon">🌌</div>
+              <div>
+                <h4>Birth Chart</h4>
+                <p>A chart based on the planetary positions calculated for birth details.</p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-icon">🪐</div>
+              <div>
+                <h4>Planetary Placements</h4>
+                <p>Chart calculations can identify planetary positions and houses according to the selected system.</p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-icon">📜</div>
+              <div>
+                <h4>Traditional Interpretation</h4>
+                <p>Astrological interpretations depend on the chart system and practitioner.</p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-icon">🌍</div>
+              <div>
+                <h4>International Birthplaces</h4>
+                <p>Correct time-zone and location handling is important for births outside India.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="notice">
+          <strong>Development Note:</strong> This page currently creates a WhatsApp
+          enquiry from the submitted form. It does not calculate or display an
+          actual Kundli. Automated chart generation requires a backend, a reliable
+          ephemeris/calculation library or astrology API, time-zone handling,
+          and appropriate data protection.
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Need Help With Your Birth Details?</h2>
+        <p>Contact BABA ASTRO for information about Kundli services and availability.</p>
+        <a class="btn"
+           href="https://wa.me/919519608505?text=Hello%20BABA%20ASTRO%2C%20I%20have%20a%20question%20about%20Kundli%20services."
+           target="_blank" rel="noopener noreferrer">Ask On WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <p><strong>BABA ASTRO</strong> · Vedic Astrology</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="consultation.html">Consultation</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="https://www.instagram.com/info.babaastro/"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="copyright">
+        © <span id="year"></span> BABA ASTRO. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp"
+     href="https://wa.me/919519608505?text=Hello%20BABA%20ASTRO%2C%20I%20need%20help%20with%20Kundli."
+     target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const birthDate = document.getElementById("birthDate");
+    birthDate.max = new Date().toISOString().split("T")[0];
+
+    document.getElementById("kundliForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("fullName").value.trim();
+      const date = birthDate.value;
+      const time = document.getElementById("birthTime").value;
+      const place = document.getElementById("birthPlace").value.trim();
+      const gender = document.getElementById("gender").value;
+      const chartType = document.getElementById("chartType").value;
+
+      if (!name || !date || !time || !place) {
+        alert("Please complete all required fields.");
+        return;
+      }
+
+      if (date > birthDate.max) {
+        alert("Date of birth cannot be in the future.");
+        return;
+      }
+
+      const chartLabels = {
+        vedic: "Vedic Kundli",
+        north: "North Indian Chart",
+        south: "South Indian Chart"
+      };
+
+      const message = [
+        "Hello BABA ASTRO, I would like to enquire about Kundli services.",
+        "",
+        "Name: " + name,
+        "Date of Birth: " + date,
+        "Time of Birth: " + time,
+        "Birthplace: " + place,
+        "Chart Preference: " + chartLabels[chartType],
+        gender ? "Gender: " + gender : "",
+        "",
+        "Please confirm the service availability and next steps."
+      ].filter(Boolean).join("\n");
+
+      document.getElementById("resultMessage").textContent =
+        "Your details have been prepared for an enquiry. No Kundli has been calculated yet.";
+
+      document.getElementById("whatsappLink").href =
+        "https://wa.me/919519608505?text=" + encodeURIComponent(message);
+
+      document.getElementById("formResult").style.display = "block";
+      document.getElementById("formResult").scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    });
+  </script>
+</body>
+</html>

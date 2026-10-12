@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07172e">
+  <meta name="description" content="Contact BABA ASTRO for astrology service enquiries, consultations and business information.">
+  <title>Contact Us | BABA ASTRO</title>
+
+  <style>
+    :root {
+      --navy: #07172e;
+      --navy2: #102b4d;
+      --gold: #e7ae35;
+      --saffron: #d66a12;
+      --cream: #fff8e8;
+      --text: #26354a;
+      --muted: #687386;
+      --border: #eadfca;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fffdf8;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1160px, 92%); margin: auto; }
+
+    .topbar {
+      background: var(--navy);
+      color: #ffdb83;
+      text-align: center;
+      padding: 9px;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    header { background: #fffdf8; border-bottom: 1px solid var(--border); }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; }
+
+    .brand img { width: 52px; height: 52px; object-fit: contain; }
+
+    .brand strong {
+      display: block;
+      font: bold 23px Georgia, serif;
+      color: var(--navy);
+    }
+
+    .brand small {
+      color: #a76510;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; align-items: center; gap: 18px; font-size: 13px; font-weight: bold; }
+    nav a:hover { color: var(--saffron); }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border: 0;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffdb83, var(--saffron));
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 75px 0;
+      color: white;
+      background:
+        radial-gradient(circle at 85% 30%, #e7ae3529, transparent 35%),
+        linear-gradient(120deg, var(--navy), var(--navy2));
+    }
+
+    .eyebrow {
+      color: #ffdb83;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 800px;
+      margin: 18px 0;
+      font: normal clamp(42px, 6vw, 64px)/1.12 Georgia, serif;
+    }
+
+    .hero h1 span { color: #ffdb83; }
+    .hero p { max-width: 680px; color: #d1d9e6; font-size: 15px; }
+
+    section { padding: 70px 0; }
+
+    .heading { max-width: 720px; margin: 0 auto 35px; text-align: center; }
+
+    .heading small {
+      color: #a76510;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .heading h2 {
+      color: var(--navy);
+      margin: 12px 0;
+      font: normal clamp(30px, 4vw, 42px)/1.2 Georgia, serif;
+    }
+
+    .heading p { color: var(--muted); font-size: 14px; }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .contact-info {
+      padding: 30px;
+      border-radius: 20px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-info h2 {
+      font: normal 29px Georgia, serif;
+      margin-bottom: 10px;
+    }
+
+    .contact-info > p { color: #d1d9e6; font-size: 13px; margin-bottom: 25px; }
+
+    .info-item {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      padding: 17px 0;
+      border-bottom: 1px solid #ffffff25;
+    }
+
+    .info-item:last-child { border-bottom: 0; }
+
+    .info-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      border-radius: 12px;
+      background: #ffffff13;
+      color: #ffdb83;
+      font-size: 20px;
+    }
+
+    .info-item h3 { font-size: 14px; margin-bottom: 3px; }
+    .info-item p, .info-item a { font-size: 12px; color: #d1d9e6; overflow-wrap: anywhere; }
+    .info-item a:hover { color: #ffdb83; }
+
+    .form-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 12px 35px #07172e08;
+    }
+
+    .form-card h2 { color: var(--navy); font: normal 28px Georgia, serif; }
+    .form-card > p { color: var(--muted); font-size: 13px; margin: 8px 0 24px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+
+    label { color: var(--navy); font-size: 12px; font-weight: bold; }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #dcd5c8;
+      border-radius: 9px;
+      background: #fffdf8;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    textarea { min-height: 125px; resize: vertical; }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #e7ae3560;
+      border-color: var(--gold);
+    }
+
+    .submit-btn { width: 100%; margin-top: 22px; padding: 15px; }
+
+    .privacy-note { color: var(--muted); font-size: 11px; margin-top: 13px; }
+
+    .channels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .channel {
+      padding: 25px;
+      text-align: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .channel .icon { font-size: 30px; }
+    .channel h3 { color: var(--navy); margin: 10px 0 5px; font-size: 17px; }
+    .channel p { color: var(--muted); font-size: 12px; margin-bottom: 13px; }
+    .channel a { color: #a76510; font-size: 12px; font-weight: bold; overflow-wrap: anywhere; }
+
+    .result {
+      display: none;
+      margin-top: 20px;
+      padding: 17px;
+      background: var(--cream);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+    }
+
+    .result h3 { color: var(--navy); font-size: 16px; }
+    .result p { color: var(--muted); font-size: 13px; margin: 5px 0 12px; }
+    .result a { color: #a76510; font-size: 12px; font-weight: bold; }
+
+    .notice {
+      margin-top: 25px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .cta { background: var(--navy); color: white; text-align: center; padding: 55px 0; }
+    .cta h2 { font: normal clamp(29px, 4vw, 42px) Georgia, serif; margin-bottom: 12px; }
+    .cta p { color: #cbd5e1; font-size: 14px; margin-bottom: 22px; }
+
+    footer { background: #061225; color: #d4ddeb; padding: 35px 0 20px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer p, footer a { font-size: 12px; color: #b6c1d2; }
+    footer a:hover { color: #ffdb83; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .copyright { border-top: 1px solid #26364d; margin-top: 22px; padding-top: 16px; font-size: 11px; color: #aebbd0; }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      padding: 12px 17px;
+      border-radius: 30px;
+      background: #168b4b;
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      box-shadow: 0 6px 20px #0003;
+    }
+
+    @media(max-width: 900px) {
+      nav { gap: 10px; }
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width: 650px) {
+      .navbar { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      nav { flex-wrap: wrap; gap: 12px; }
+      .hero { padding: 55px 0; }
+      section { padding: 48px 0; }
+      .form-grid, .channels { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .form-card, .contact-info { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">WE ARE HERE TO HELP · BABA ASTRO SUPPORT</div>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/baba-astro-logo.png" alt="BABA ASTRO Logo">
+        <div>
+          <strong>BABA ASTRO</strong>
+          <small>VEDIC ASTROLOGY</small>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="kundli.html">Kundli</a>
+        <a href="horoscope.html">Horoscope</a>
+        <a href="contact.html" class="btn">Contact Us →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Contact BABA ASTRO</div>
+        <h1>Let's Start A <span>Conversation.</span></h1>
+        <p>
+          Have a question about astrology services, consultation options
+          or international availability? Send an enquiry to BABA ASTRO
+          using the contact options below.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact-layout">
+          <aside class="contact-info">
+            <h2>Get In Touch.</h2>
+            <p>
+              Choose your preferred contact channel. For quicker assistance,
+              include the service you are asking about in your message.
+            </p>
+
+            <div class="info-item">
+              <div class="info-icon">💬</div>
+              <div>
+                <h3>WhatsApp Enquiries</h3>
+                <p>Message the BABA ASTRO team.</p>
+                <a href="https://wa.me/919519608505"
+                   target="_blank" rel="noopener noreferrer">+91 95196 08505 ↗</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🌐</div>
+              <div>
+                <h3>Official Website</h3>
+                <p>Explore BABA ASTRO online.</p>
+                <a href="https://babaastro.com" target="_blank"
+                   rel="noopener noreferrer">babaastro.com ↗</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📸</div>
+              <div>
+                <h3>Instagram</h3>
+                <p>Follow our brand updates.</p>
+                <a href="https://www.instagram.com/infobabaastro/"
+                   target="_blank" rel="noopener noreferrer">@info.babaastro ↗</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🌍</div>
+              <div>
+                <h3>International Enquiries</h3>
+                <p>Ask about supported countries, time zones and service options.</p>
+              </div>
+            </div>
+          </aside>
+
+          <div class="form-card">
+            <h2>Send An Enquiry.</h2>
+            <p>Complete the form below to prepare a message for WhatsApp.</p>
+
+            <form id="contactForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full Name *</label>
+                  <input id="name" name="name" type="text"
+                         placeholder="Your name" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                  <label for="email">Email Address *</label>
+                  <input id="email" name="email" type="email"
+                         placeholder="you@example.com" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                  <label for="country">Country *</label>
+                  <input id="country" name="country" type="text"
+                         placeholder="Your country" autocomplete="country-name" required>
+                </div>
+
+                <div class="field">
+                  <label for="subject">Enquiry Type *</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Choose a topic</option>
+                    <option>Astrologer Chat</option>
+                    <option>Voice Consultation</option>
+                    <option>Video Consultation</option>
+                    <option>Kundli Generation</option>
+                    <option>AI Astrology</option>
+                    <option>Panchang & Muhurat</option>
+                    <option>Daily Horoscope</option>
+                    <option>Wallet & Recharge</option>
+                    <option>Business Partnership</option>
+                    <option>Other Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="field full">
+                  <label for="message">Your Message *</label>
+                  <textarea id="message" name="message"
+                            placeholder="How can we help you?"
+                            maxlength="1500" required></textarea>
+                </div>
+              </div>
+
+              <button class="btn submit-btn" type="submit">
+                Prepare WhatsApp Enquiry →
+              </button>
+
+              <p class="privacy-note">
+                By continuing, you choose to open WhatsApp with your enquiry
+                details. Avoid including sensitive personal information.
+              </p>
+            </form>
+
+            <div class="result" id="formResult" role="status" aria-live="polite">
+              <h3>Your Enquiry Is Ready</h3>
+              <p>Your message has been prepared. Select below to open WhatsApp and send it.</p>
+              <a id="sendWhatsApp" href="#" target="_blank" rel="noopener noreferrer">
+                Open WhatsApp To Send Message ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Contact Form Notice:</strong> This form does not send or store
+          information on a BABA ASTRO server. It prepares a WhatsApp message
+          for you to review and send. Email handling, support tickets and
+          automated responses require a backend integration.
+        </div>
+      </div>
+    </section>
+
+    <section style="background: var(--cream);">
+      <div class="container">
+        <div class="heading">
+          <small>Contact Channels</small>
+          <h2>Connect With BABA ASTRO.</h2>
+          <p>Use the channel that best fits your enquiry.</p>
+        </div>
+
+        <div class="channels">
+          <article class="channel">
+            <div class="icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>For general questions and service enquiries.</p>
+            <a href="https://wa.me/919519608505"
+               target="_blank" rel="noopener noreferrer">Message Us ↗</a>
+          </article>
+
+          <article class="channel">
+            <div class="icon">📸</div>
+            <h3>Instagram</h3>
+            <p>For brand updates and social content.</p>
+            <a href="https://www.instagram.com/infobabaastro/"
+               target="_blank" rel="noopener noreferrer">Follow @info.babaastro ↗</a>
+          </article>
+
+          <article class="channel">
+            <div class="icon">🌐</div>
+            <h3>Website</h3>
+            <p>Explore our planned service categories.</p>
+            <a href="https://babaastro.com"
+               target="_blank" rel="noopener noreferrer">Visit babaastro.com ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Have A Quick Question?</h2>
+        <p>Start a WhatsApp conversation with BABA ASTRO.</p>
+        <a class="btn"
+           href="https://wa.me/919519608505?text=Hello%20BABA%20ASTRO%2C%20I%20have%20a%20question."
+           target="_blank" rel="noopener noreferrer">Chat On WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <p><strong>BABA ASTRO</strong> · Vedic Astrology</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="consultation.html">Consultation</a>
+          <a href="kundli.html">Kundli</a>
+          <a href="horoscope.html">Horoscope</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="https://www.instagram.com/infobabaastro/"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="copyright">
+        © <span id="year"></span> BABA ASTRO. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp"
+     href="https://wa.me/919519608505?text=Hello%20BABA%20ASTRO%2C%20I%20need%20assistance."
+     target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const country = document.getElementById("country").value.trim();
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !country || !subject || !message) {
+        alert("Please complete all required fields.");
+        return;
+      }
+
+      const whatsappMessage = [
+        "Hello BABA ASTRO, I have a website enquiry.",
+        "",
+        "Name: " + name,
+        "Email: " + email,
+        "Country: " + country,
+        "Enquiry Type: " + subject,
+        "",
+        "Message: " + message
+      ].join("\n");
+
+      document.getElementById("sendWhatsApp").href =
+        "https://wa.me/919519608505?text=" + encodeURIComponent(whatsappMessage);
+
+      document.getElementById("formResult").style.display = "block";
+      document.getElementById("formResult").scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    });
+  </script>
+</body>
+</html>

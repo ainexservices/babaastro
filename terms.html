@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07172e">
+  <meta name="description" content="Read BABA ASTRO's terms and conditions for website use, astrology services, consultations and payments.">
+  <title>Terms & Conditions | BABA ASTRO</title>
+
+  <style>
+    :root {
+      --navy: #07172e;
+      --navy2: #102b4d;
+      --gold: #e7ae35;
+      --saffron: #d66a12;
+      --cream: #fff8e8;
+      --text: #26354a;
+      --muted: #687386;
+      --border: #eadfca;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fffdf8;
+      line-height: 1.8;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1160px, 92%); margin: auto; }
+
+    .topbar {
+      background: var(--navy);
+      color: #ffdb83;
+      text-align: center;
+      padding: 9px;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    header { background: #fffdf8; border-bottom: 1px solid var(--border); }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; }
+
+    .brand img { width: 52px; height: 52px; object-fit: contain; }
+
+    .brand strong {
+      display: block;
+      font: bold 23px Georgia, serif;
+      color: var(--navy);
+    }
+
+    .brand small {
+      color: #a76510;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; align-items: center; gap: 18px; font-size: 13px; font-weight: bold; }
+    nav a:hover { color: var(--saffron); }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffdb83, var(--saffron));
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 65px 0;
+      color: white;
+      background:
+        radial-gradient(circle at 85% 30%, #e7ae3529, transparent 35%),
+        linear-gradient(120deg, var(--navy), var(--navy2));
+    }
+
+    .eyebrow {
+      color: #ffdb83;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 15px 0;
+      font: normal clamp(38px, 5vw, 58px)/1.15 Georgia, serif;
+    }
+
+    .hero p { max-width: 720px; color: #d1d9e6; font-size: 14px; }
+
+    .policy-area { padding: 55px 0 75px; }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 245px 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      padding: 22px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .toc h2 { color: var(--navy); font-size: 16px; margin-bottom: 12px; }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      font-size: 12px;
+      border-bottom: 1px solid #eadfca80;
+    }
+
+    .toc a:hover { color: #a76510; }
+
+    .policy-content {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+    }
+
+    .policy-content h2 {
+      margin: 27px 0 10px;
+      color: var(--navy);
+      font: normal 25px Georgia, serif;
+      scroll-margin-top: 20px;
+    }
+
+    .policy-content h2:first-child { margin-top: 0; }
+
+    .policy-content p,
+    .policy-content li {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .policy-content p { margin-bottom: 12px; }
+    .policy-content ul { padding-left: 22px; margin: 10px 0 16px; }
+    .policy-content li { margin-bottom: 7px; }
+
+    .notice {
+      padding: 18px;
+      margin-bottom: 25px;
+      background: #fff8e8;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      color: #6e531d;
+      font-size: 12px;
+    }
+
+    .last-updated {
+      margin-bottom: 25px;
+      color: #a76510;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .contact-box {
+      margin-top: 30px;
+      padding: 22px;
+      border-radius: 14px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-box h3 { font: normal 23px Georgia, serif; margin-bottom: 8px; }
+    .contact-box p { color: #d1d9e6; }
+    .contact-box a { color: #ffdb83; overflow-wrap: anywhere; }
+
+    footer { background: #061225; color: #d4ddeb; padding: 35px 0 20px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer p, footer a { font-size: 12px; color: #b6c1d2; }
+    footer a:hover { color: #ffdb83; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .copyright { border-top: 1px solid #26364d; margin-top: 22px; padding-top: 16px; font-size: 11px; color: #aebbd0; }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      padding: 12px 17px;
+      border-radius: 30px;
+      background: #168b4b;
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      box-shadow: 0 6px 20px #0003;
+    }
+
+    @media(max-width: 900px) {
+      nav { gap: 10px; }
+      .policy-layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+    }
+
+    @media(max-width: 650px) {
+      .navbar { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      nav { flex-wrap: wrap; gap: 12px; }
+      .hero { padding: 48px 0; }
+      .policy-content { padding: 21px; }
+      .policy-content h2 { font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">TERMS OF USE · BABA ASTRO</div>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/baba-astro-logo.png" alt="BABA ASTRO Logo">
+        <div>
+          <strong>BABA ASTRO</strong>
+          <small>VEDIC ASTROLOGY</small>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="kundli.html">Kundli</a>
+        <a href="horoscope.html">Horoscope</a>
+        <a href="contact.html" class="btn">Contact Us →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Legal Information</div>
+        <h1>Terms & Conditions</h1>
+        <p>
+          Please review these terms before using the BABA ASTRO website
+          or any service made available through the platform.
+        </p>
+      </div>
+    </section>
+
+    <section class="policy-area">
+      <div class="container policy-layout">
+
+        <aside class="toc">
+          <h2>On This Page</h2>
+          <a href="#acceptance">1. Acceptance Of Terms</a>
+          <a href="#eligibility">2. Eligibility</a>
+          <a href="#services">3. Services</a>
+          <a href="#accounts">4. Accounts & Security</a>
+          <a href="#consultations">5. Consultations</a>
+          <a href="#astrology">6. Astrology Disclaimer</a>
+          <a href="#ai">7. AI Astrology</a>
+          <a href="#payments">8. Payments & Wallet</a>
+          <a href="#cancellation">9. Cancellation & Refunds</a>
+          <a href="#conduct">10. User Conduct</a>
+          <a href="#intellectual">11. Intellectual Property</a>
+          <a href="#third-party">12. Third-Party Services</a>
+          <a href="#liability">13. Limitation Of Liability</a>
+          <a href="#privacy">14. Privacy</a>
+          <a href="#international">15. International Users</a>
+          <a href="#changes">16. Changes To Terms</a>
+          <a href="#law">17. Governing Law</a>
+          <a href="#contact">18. Contact</a>
+        </aside>
+
+        <article class="policy-content">
+          <div class="notice">
+            <strong>Important Before Publishing:</strong> This is a draft
+            template, not legal advice or a verified statement of BABA ASTRO's
+            operating practices. Replace placeholders, confirm the actual
+            service model and refund rules, and obtain legal review before
+            accepting customers or payments. Do not publish provisions that
+            conflict with applicable law or your actual business practices.
+          </div>
+
+          <p class="last-updated">Effective Date: [Insert Effective Date]</p>
+
+          <h2 id="acceptance">1. Acceptance Of Terms</h2>
+          <p>
+            These Terms & Conditions ("Terms") govern access to and use of
+            babaastro.com and any services operated under the BABA ASTRO brand.
+            In these Terms, "BABA ASTRO", "we", "us" and "our" refer to the
+            legal business entity identified below.
+          </p>
+          <p>
+            By using a service, you agree to the applicable Terms where
+            permitted by law. If you do not agree, do not use that service.
+            Where additional consent or a separate agreement is required,
+            it will be presented before the relevant activity.
+          </p>
+
+          <h2 id="eligibility">2. Eligibility</h2>
+          <p>
+            You must meet the minimum age and other eligibility requirements
+            applicable to the service and your location. The operator must
+            establish and publish appropriate age restrictions before launch.
+            Additional safeguards may apply to minors under local law.
+          </p>
+          <p>
+            You agree to provide accurate information when using a form,
+            creating an account or requesting a service.
+          </p>
+
+          <h2 id="services">3. Services</h2>
+          <p>
+            Depending on actual availability, BABA ASTRO may offer or plan
+            to offer the following service categories:
+          </p>
+          <ul>
+            <li>Astrologer chat, voice and video consultations.</li>
+            <li>Kundli and birth-chart resources.</li>
+            <li>AI-assisted astrology features.</li>
+            <li>Panchang, Muhurat and daily horoscope content.</li>
+            <li>Wallet, recharge and payment functionality.</li>
+          </ul>
+          <p>
+            Not every feature may be available at all times or in all regions.
+            A service is available only when it has been implemented and
+            explicitly offered by BABA ASTRO. A description on a page does
+            not itself confirm that the service is operational.
+          </p>
+
+          <h2 id="accounts">4. Accounts & Security</h2>
+          <p>
+            If account registration is provided, you are responsible for
+            keeping your login credentials confidential and notifying the
+            operator promptly of suspected unauthorised use.
+          </p>
+          <p>
+            Account suspension or termination must be based on legitimate
+            reasons and handled consistently with applicable law and any
+            consumer rights that cannot be excluded.
+          </p>
+
+          <h2 id="consultations">5. Consultations</h2>
+          <p>
+            Consultations may be offered through supported chat, voice or
+            video channels. Before booking, users should be shown the applicable
+            price, session duration, astrologer availability, cancellation
+            conditions and any other material terms.
+          </p>
+          <ul>
+            <li>Bookings are subject to confirmation and availability.</li>
+            <li>Users should provide relevant information accurately and respectfully.</li>
+            <li>Session recordings must not be made or shared without the necessary consent and legal authority.</li>
+            <li>Any rules for late arrival, disconnection, incomplete sessions or astrologer unavailability must be disclosed before payment.</li>
+          </ul>
+          <p>
+            Do not treat an enquiry or WhatsApp message as a confirmed booking
+            unless the operator has expressly confirmed the appointment.
+          </p>
+
+          <h2 id="astrology">6. Astrology Disclaimer</h2>
+          <p>
+            Astrology, horoscope and Kundli content is provided for
+            informational, cultural, spiritual or entertainment purposes,
+            as applicable to the particular service. Interpretations can
+            differ between practitioners and astrological systems.
+          </p>
+          <p>
+            Astrology is not a substitute for qualified medical, mental-health,
+            legal, financial or other professional advice. Do not delay or
+            disregard professional assistance based on astrology content.
+          </p>
+          <p>
+            BABA ASTRO should not promise guaranteed outcomes or present
+            astrological interpretations as scientifically certain predictions
+            of future events.
+          </p>
+
+          <h2 id="ai">7. AI Astrology</h2>
+          <p>
+            If AI-powered features are provided, responses may be incomplete,
+            inaccurate or generated from limited information. Users should
+            review such responses critically and avoid relying on them as the
+            sole basis for important decisions.
+          </p>
+          <p>
+            The final terms and privacy policy should explain whether user
+            inputs are processed by external AI providers and how those inputs
+            are handled.
+          </p>
+
+          <h2 id="payments">8. Payments & Wallet</h2>
+          <p>
+            If payments or wallet features are offered, applicable prices,
+            currency, taxes, transaction charges and payment terms should
+            be displayed before the user commits to a transaction.
+          </p>
+          <ul>
+            <li>Wallet credits, if implemented, may be subject to disclosed usage and expiry rules, where lawful.</li>
+            <li>Wallet balances and transaction records should be displayed accurately.</li>
+            <li>Users should receive appropriate transaction confirmation and support for payment disputes.</li>
+            <li>Payment processing may be subject to the terms of the relevant payment provider.</li>
+          </ul>
+          <p>
+            Do not publish a wallet expiry, forfeiture or non-refundable
+            balance rule without confirming its legality and clearly
+            disclosing it before purchase.
+          </p>
+
+          <h2 id="cancellation">9. Cancellation & Refunds</h2>
+          <p>
+            The cancellation and refund policy must be published before
+            bookings or payments are accepted. It should clearly explain
+            eligibility, deadlines, processing times, failed sessions,
+            duplicate charges, cancelled appointments and refund methods.
+          </p>
+          <p>
+            Refund requests should be reviewed under the published policy
+            and applicable consumer protection laws. Nothing in these Terms
+            is intended to remove a statutory right that cannot lawfully
+            be excluded.
+          </p>
+          <p>
+            <strong>Before launch:</strong> Insert the actual BABA ASTRO
+            cancellation and refund policy here and ensure it matches the
+            checkout, booking flow and payment-provider rules.
+          </p>
+
+          <h2 id="conduct">10. User Conduct</h2>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use the website for unlawful, fraudulent or abusive purposes.</li>
+            <li>Attempt unauthorised access to accounts, systems or data.</li>
+            <li>Interfere with the operation or security of the website.</li>
+            <li>Harass, threaten or abuse astrologers, support staff or other users.</li>
+            <li>Copy or redistribute protected content without permission or a legal basis.</li>
+          </ul>
+
+          <h2 id="intellectual">11. Intellectual Property</h2>
+          <p>
+            Website content, branding, logos, text, design elements and
+            software may be protected by intellectual-property laws. You may
+            use the website for personal, lawful purposes, but may not copy,
+            distribute, modify or commercially exploit protected materials
+            without permission or another valid legal basis.
+          </p>
+          <p>
+            Third-party names, tools and content remain subject to their
+            respective rights and licences.
+          </p>
+
+          <h2 id="third-party">12. Third-Party Services</h2>
+          <p>
+            The website may link to or integrate with third-party services,
+            such as WhatsApp, payment providers, hosting providers or
+            astrology and AI tools. Those services may have separate terms
+            and privacy policies.
+          </p>
+          <p>
+            Users should review the relevant third-party terms before using
+            an external service. The final policy should accurately explain
+            which integrations are in use.
+          </p>
+
+          <h2 id="liability">13. Limitation Of Liability</h2>
+          <p>
+            To the extent permitted by applicable law, the operator may
+            describe the limits of its responsibility for interruptions,
+            technical issues or reliance on general informational content.
+            Any limitation must be reasonable, clearly disclosed and
+            consistent with mandatory consumer protections.
+          </p>
+          <p>
+            Nothing in these Terms excludes liability where such exclusion
+            is prohibited by law, or removes consumer rights that cannot
+            lawfully be waived.
+          </p>
+
+          <h2 id="privacy">14. Privacy</h2>
+          <p>
+            Personal information is handled according to the applicable
+            Privacy Policy and relevant privacy laws. Please review
+            <a href="privacy.html" style="color:#a76510;font-weight:bold;">our Privacy Policy</a>
+            for details about information collection, use, sharing,
+            retention and available privacy rights.
+          </p>
+
+          <h2 id="international">15. International Users</h2>
+          <p>
+            Users accessing the website from outside India are responsible
+            for ensuring their use of the service is lawful in their location.
+            Service availability, payment options, taxes, consumer rights
+            and additional legal requirements may vary by country.
+          </p>
+          <p>
+            The operator must comply with applicable laws in the regions
+            where it offers services. This clause does not override mandatory
+            consumer protections or other rights granted by local law.
+          </p>
+
+          <h2 id="changes">16. Changes To These Terms</h2>
+          <p>
+            These Terms may be revised as the website and its services evolve.
+            The effective date should be updated when material changes are
+            published. Where required by law, users will receive advance
+            notice or be asked to provide consent.
+          </p>
+
+          <h2 id="law">17. Governing Law & Disputes</h2>
+          <p>
+            <strong>Insert the applicable governing law, jurisdiction and
+            dispute-resolution process after legal review.</strong> These
+            provisions must reflect the operator's actual legal location,
+            relevant contracts and mandatory consumer laws.
+          </p>
+          <p>
+            Nothing in this section is intended to restrict access to a
+            court, regulator or dispute mechanism where such access is
+            protected by applicable law.
+          </p>
+
+          <h2 id="contact">18. Contact Information</h2>
+          <p>
+            For questions about these Terms, contact the legal operator
+            through the verified channels below.
+          </p>
+
+          <div class="contact-box">
+            <h3>BABA ASTRO</h3>
+            <p><strong>Website:</strong> <a href="https://babaastro.com">babaastro.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/919519608505">+91 95196 08505</a></p>
+            <p><strong>Legal Business Name:</strong> [Insert Legal Entity Name]</p>
+            <p><strong>Business Email:</strong> [Insert Verified Email Address]</p>
+            <p><strong>Registered Address:</strong> [Insert Verified Business Address]</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <p><strong>BABA ASTRO</strong> · Vedic Astrology</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="consultation.html">Consultation</a>
+          <a href="kundli.html">Kundli</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="https://www.instagram.com/info.babaastro/"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="copyright">
+        © <span id="year"></span> BABA ASTRO. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp"
+     href="https://wa.me/919519608505?text=Hello%20BABA%20ASTRO%2C%20I%20have%20a%20question%20about%20your%20terms."
+     target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
